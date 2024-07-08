@@ -1,9 +1,19 @@
 let startButton = document.querySelector("#startStop");
-let isRunning = false;
 startButton.addEventListener('click', changeButton);
 
+// declarar variable
+
+let isStart = true;
+
 function changeButton() {
-     startButton.innerHTML = "Stop";
-   
-}
+     
+     if (isStart) {
+          startButton.innerHTML = "Stop";
+     } else {
+          startButton.innerHTML = "Start";
+     }
+    
+     isStart = !isStart;
+   }
+
 
